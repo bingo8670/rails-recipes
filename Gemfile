@@ -15,6 +15,7 @@ gem 'bootstrap-sass'
 
 gem 'devise'
 gem 'select2-rails'
+gem 'nested_form_fields'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
