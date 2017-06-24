@@ -2,6 +2,9 @@ class Event < ApplicationRecord
 
   validates_presence_of :name
 
+  include RankedModel
+  ranks :row_order
+
   belongs_to :category, :optional => true
 
   before_validation :generate_friendly_id, :on => :create

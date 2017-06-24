@@ -12,6 +12,12 @@
     <td><%= user.id %></td>
     <td><%= user.email %></td>
     <td>
++     <%= link_to "上移", reorder_admin_event_path(event, :position => :up), :method => :post, :class => "btn btn-default" %>
++     <%= link_to "下移", reorder_admin_event_path(event, :position => :down), :method => :post, :class => "btn btn-default" %>
++     <%= link_to "置顶", reorder_admin_event_path(event, :position => :first), :method => :post, :class => "btn btn-default" %>
++     <%= link_to "置底", reorder_admin_event_path(event, :position => :last), :method => :post, :class => "btn btn-default" %>
+
+      
       <% user.groups.each do |g| %>
         <%= g.name %><br>
       <% end %>
